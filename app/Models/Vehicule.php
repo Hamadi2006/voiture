@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory ;
 
 class Vehicule extends Model
 {
-    protected $fillable = ['marque', 'modele','nb_places'];
+        use HasFactory;
+
+    protected $fillable = ['marque', 'modele','nb_places','categorie_id'];
 
 
 }
