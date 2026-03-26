@@ -3,11 +3,12 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-// Modifiez l'import ici pour correspondre à la classe appelée plus bas
 use Database\Seeders\CategorieSeeder; 
 use Database\Seeders\ClientSeeder;
 use Database\Seeders\OptionSeeder;
 use Database\Seeders\VehiculeSeeder;
+use Database\Seeders\VOptionSeeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CategorieSeeder::class,
             OptionSeeder::class,
             VehiculeSeeder::class,
+             VOptionSeeder::class, 
         ]);
     }
 }

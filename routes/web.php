@@ -1,7 +1,5 @@
 <?php
-
+use App\Http\Controllers\VehiculeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('Reserve.index');
-});
+Route::get('/', [VehiculeController::class, 'index'])->name("home");

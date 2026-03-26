@@ -13,17 +13,19 @@
             </select>
         </div>
 
-        <x-card 
-            title="Hyundai i10"
-            price="594,38"
-            location="Marrakech Aéroport"
-            rating="5.5" />
+@foreach($vehicules as $v)
+    <x-card 
+        :title="$v->marque . ' ' . $v->model" 
+        :price="$v->categorie->prix_jour" 
+        :location="$v->emplacement ?? 'Marrakech Aéroport'"
+        rating="4.8"
+    />
+@endforeach
 
-        <x-card 
-            title="Fiat Panda"
-            price="719,49"
-            location="Marrakech Ville"
-            rating="8.9" />
+
+        
+
+       
     </div>
 </div>
 @endsection

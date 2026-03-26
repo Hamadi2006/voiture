@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categorie extends Model
 {
-        use HasFactory;
+use hasfactory;
+    
     protected $fillable = ['libelle', 'prix_jour'];
+
+    public function vehicules()
+    {
+        return $this->hasMany(Vehicule::class);
+    }
 }

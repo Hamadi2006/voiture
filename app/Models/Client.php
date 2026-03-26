@@ -9,6 +9,10 @@ class Client extends Model
 {
         use HasFactory;
 
-    protected $fillable = ['nom', 'telephone', 'email'];
-
+    protected $fillable = ['nom', 'telephone', 'email',"password"];
+    public function location()
+    {
+        return $this->hasMany(location::class);
+    }
 }
+

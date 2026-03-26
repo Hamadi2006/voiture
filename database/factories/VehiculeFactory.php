@@ -13,6 +13,7 @@ class VehiculeFactory extends Factory
     public function definition(): array
     {
         return [
+            'photo' => 'assets/photo.avif',
             'marque' => fake()->company(),
             'modele' => fake()->word(),
             'nb_places' => fake()->numberBetween(2, 7),
